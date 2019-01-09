@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hit_Testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap changes background color" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCj-eP-K3Z">
+                                <rect key="frame" x="40" y="80" width="150" height="75"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="A1H-P1-gq2"/>
+                                    <constraint firstAttribute="height" constant="75" id="ISD-I3-ZUS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_target" translatesAutoresizingMaskIntoConstraints="NO" id="Tib-qI-744">
+                                <rect key="frame" x="245" y="65" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="2qc-eD-DMR"/>
+                                    <constraint firstAttribute="height" constant="100" id="ecq-s3-LK2"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5X-Lu-Lik" customClass="MyView" customModule="HitTesting" customModuleProvider="target">
+                                <rect key="frame" x="67.5" y="268.5" width="240" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zP4-ne-3Bp">
+                                        <rect key="frame" x="63.5" y="160" width="113" height="30"/>
+                                        <state key="normal" title="Tappable Button"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchDragInside" id="8ZF-BF-9IF"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WM1-Cq-C1j">
+                                        <rect key="frame" x="96" y="53" width="48" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="zP4-ne-3Bp" firstAttribute="centerX" secondItem="m5X-Lu-Lik" secondAttribute="centerX" id="Qbd-RG-Wdy"/>
+                                    <constraint firstItem="WM1-Cq-C1j" firstAttribute="centerY" secondItem="m5X-Lu-Lik" secondAttribute="centerY" id="Qhf-jB-0Nb"/>
+                                    <constraint firstAttribute="height" constant="130" id="SJu-pv-TfY"/>
+                                    <constraint firstAttribute="width" constant="240" id="m3a-so-r8N"/>
+                                    <constraint firstItem="zP4-ne-3Bp" firstAttribute="top" secondItem="m5X-Lu-Lik" secondAttribute="top" constant="160" id="qNu-I7-yoA"/>
+                                    <constraint firstItem="WM1-Cq-C1j" firstAttribute="centerX" secondItem="m5X-Lu-Lik" secondAttribute="centerX" id="sQK-Ub-X9A"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Tib-qI-744" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="5z0-bZ-JUU"/>
+                            <constraint firstItem="m5X-Lu-Lik" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="E62-Xe-uSD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tib-qI-744" secondAttribute="trailing" constant="30" id="dDC-jm-Eih"/>
+                            <constraint firstItem="rCj-eP-K3Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="drm-ar-I1g"/>
+                            <constraint firstItem="m5X-Lu-Lik" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eIz-Il-I6r"/>
+                            <constraint firstItem="rCj-eP-K3Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="hvZ-Kh-hUC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="5Mb-k4-iOY" appends="YES" id="Uq1-dp-gzt"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="buttonTapLabel" destination="WM1-Cq-C1j" id="7ki-lW-pq1"/>
+                        <outlet property="tapImageView" destination="Tib-qI-744" id="ZBs-3r-mt2"/>
+                        <outlet property="tapLabel" destination="rCj-eP-K3Z" id="rH5-BU-1fw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="5Mb-k4-iOY">
+                    <connections>
+                        <action selector="tapped:" destination="BYZ-38-t0r" id="bcb-CJ-u25"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="red_target" width="36" height="36"/>
+    </resources>
+</document>
